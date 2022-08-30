@@ -200,11 +200,12 @@ namespace WindowsForms_Task3
 
         private void moneyTxtb_KeyPress(object sender, KeyPressEventArgs e)
         {
-            int index = moneyTxtb.SelectionStart + moneyTxtb.SelectionLength;
-            if (e.KeyChar == '\b' && moneyTxtb.Text != String.Empty && index != 0)
+            TextBox tb = sender as TextBox;
+            int index = tb.SelectionStart + tb.SelectionLength;
+            if (e.KeyChar == '\b' && tb.Text != String.Empty && index != 0)
             {
-                moneyTxtb.Text = moneyTxtb.Text.Remove(index - 1, 1);
-                moneyTxtb.SelectionStart = index - 1;
+                tb.Text = tb.Text.Remove(index - 1, 1);
+                tb.SelectionStart = index - 1;
             }
             e.Handled = !char.IsDigit(e.KeyChar);
         }
