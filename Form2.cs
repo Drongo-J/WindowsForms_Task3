@@ -21,7 +21,7 @@ namespace WindowsForms_Task3
             oilsComboBox.Items.Add("AI95");
             oilsComboBox.Items.Add("AI98");
 
-            byLiterRb.KeyPress += moneyTxtb_KeyPress;
+            literTxtb.KeyPress += moneyTxtb_KeyPress;
             literTxtb.TextChanged += moneyTxtb_TextChanged;
             byLiterRb.CheckedChanged += byMoneyRb_CheckedChanged;
         }
